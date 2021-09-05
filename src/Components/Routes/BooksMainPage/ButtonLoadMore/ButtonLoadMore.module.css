@@ -1,0 +1,16 @@
+.loadMoreButtonContainer{
+    text-align: center;
+    padding-bottom: 30px;
+}
+
+.loadMoreButtonContainer button{
+    border: none;
+    outline: none;
+    padding: 8px 15px;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.loadMoreButtonContainer button:hover{
+    background-color: #a6a6a6;
+}

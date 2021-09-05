@@ -1,0 +1,21 @@
+.categoryBooksFilter{
+    display: flex;
+    align-items: center;
+    margin-right: 15px;
+}
+
+.categoryBooksFilter p{
+    color: white;
+    margin-right: 10px;
+}
+
+.categoryBooksFilter select{
+    border: none;
+    outline: none;
+    width: 150px;
+    height: 30px;
+    background-color: white;
+    padding-left: 10px;
+    font-size: 16px;
+    cursor: pointer;
+}

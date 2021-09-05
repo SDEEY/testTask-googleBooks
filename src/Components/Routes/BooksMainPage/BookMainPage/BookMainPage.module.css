@@ -1,0 +1,22 @@
+.BookMainPageContainer{
+    width: 250px;
+    background-color: antiquewhite;
+    margin-bottom: 20px;
+}
+
+.BookMainPageContainerDiv{
+    font-size: 0;
+    min-height: 230px;
+}
+
+.BookMainPageContainerDiv img{
+    width: 130px;
+
+    display: block;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+.BookMainPageContainer p{
+    padding: 0 10px;
+}

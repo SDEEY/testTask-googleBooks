@@ -1,0 +1,35 @@
+.booksSearch{
+    margin-bottom: 15px;
+}
+
+.booksSearch h1{
+    color: white;
+    margin-bottom: 10px;
+}
+
+.booksSearch form input{
+    width: 450px;
+    height: 30px;
+    border: none;
+    outline: none;
+}
+
+.booksSearch form button{
+    border: none;
+    outline: none;
+    height: 30px;
+    background-color: white;
+    padding: 0 5px;
+    cursor: pointer;
+}
+
+.booksSearch form button:hover{
+    background-color: #d0d2d2;
+}
+
+
+@media (max-width: 550px) {
+    .booksSearch form input{
+        width: 250px;
+    }
+}
