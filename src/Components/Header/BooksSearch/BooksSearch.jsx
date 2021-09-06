@@ -1,8 +1,11 @@
 import s from './BooksSearch.module.css'
 import {useDispatch, useSelector} from "react-redux";
 import {setBooksMainPageTC, setBooksTitle, setIsLoading} from "../../../redux/reducers/booksMainPage-reducer";
+import {useState} from "react";
 
 export default function BooksSearch(props) {
+    const [inputOnFocus, setInputOnFocus] = useState(false)
+
     const orderBy = useSelector(state => state.booksMainPage.orderBy)
     const category = useSelector(state => state.booksMainPage.category)
     const startIndex = useSelector(state => state.booksMainPage.startIndex)
@@ -27,10 +30,15 @@ export default function BooksSearch(props) {
     return (
         <div className={s.booksSearch}>
             <h1>Search for books</h1>
-            <form onSubmit={getBooks}>
-                <input type={'text'}/>
-                <button type={'submit'}>show</button>
-            </form>
+                <form onFocus={() => setInputOnFocus(!inputOnFocus)}
+                      onBlur={() => setInputOnFocus(!inputOnFocus)}
+                      style={inputOnFocus ? {outline: '2px solid black'} : null}
+                      onSubmit={getBooks}
+                >
+                    <input type={'text'}/>
+                    <button type={'submit'}>show</button>
+                </form>
         </div>
+
     )
 }

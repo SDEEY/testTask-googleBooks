@@ -85,7 +85,7 @@ export const setBooksMainPageTC = (title, category, orderBy, startIndex) => asyn
 }
 
 export const setBooksLoadMoreTC = (title, category, orderBy, startIndex) => async (dispatch) => {
-    const response = await apiBooks.getBooksLoadMore(title, category, orderBy, startIndex)
+    const response = await apiBooks.getBooks(title, category, orderBy, startIndex)
     console.log(response)
     response.error ?
         alert(response.error.message) :

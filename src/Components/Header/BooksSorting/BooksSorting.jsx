@@ -1,5 +1,10 @@
 import s from './BooksSorting.module.css'
-import {setBooksMainPageTC, setBooksOrderBy, setIsLoading} from "../../../redux/reducers/booksMainPage-reducer";
+import {
+    setBooksMainPageTC,
+    setBooksOrderBy,
+    setBooksTitle,
+    setIsLoading
+} from "../../../redux/reducers/booksMainPage-reducer";
 import {useDispatch, useSelector} from "react-redux";
 
 export default function BooksSorting() {
@@ -10,13 +15,14 @@ export default function BooksSorting() {
     const dispatch = useDispatch()
 
     const handleChange = (e) => {
-        if(title) {
+        if (title) {
             e.preventDefault()
 
             const orderBy = e.target.value
 
             dispatch(setIsLoading(true))
             dispatch(setBooksOrderBy(orderBy))
+            dispatch(setBooksTitle(title))
             dispatch(setBooksMainPageTC(title, category, orderBy, startIndex))
         } else {
             alert('Empty search field')

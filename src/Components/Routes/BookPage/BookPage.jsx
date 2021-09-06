@@ -4,7 +4,7 @@ import {NavLink} from "react-router-dom";
 
 export default function BookPage() {
     const info = useSelector(state => state.bookPage.info)
-    console.log(info)
+
     return (
         <div className={s.bookInfoContainer}>
             <div>

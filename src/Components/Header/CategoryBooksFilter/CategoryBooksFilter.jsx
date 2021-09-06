@@ -13,7 +13,7 @@ export default function CategoryBooksFilter(){
     const handleChange = (e) => {
         if(title){
             e.preventDefault()
-            console.log(title)
+
             const category = e.target.value
 
             dispatch(setIsLoading(true))
